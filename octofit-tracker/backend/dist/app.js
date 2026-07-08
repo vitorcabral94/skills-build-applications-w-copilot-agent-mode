@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const cors_1 = __importDefault(require("cors"));
 const express_1 = __importDefault(require("express"));
-const apiUrl_1 = require("./config/apiUrl");
+const server_1 = require("./server");
 const activities_1 = __importDefault(require("./routes/activities"));
 const leaderboard_1 = __importDefault(require("./routes/leaderboard"));
 const teams_1 = __importDefault(require("./routes/teams"));
@@ -18,8 +18,8 @@ app.get('/api/health', (_request, response) => {
     response.json({
         status: 'ok',
         service: 'octofit-tracker-backend',
-        port: apiUrl_1.apiPort,
-        apiBaseUrl: (0, apiUrl_1.getApiBaseUrl)(),
+        port: server_1.apiPort,
+        apiBaseUrl: (0, server_1.getApiBaseUrl)(),
     });
 });
 app.use('/api/users', users_1.default);

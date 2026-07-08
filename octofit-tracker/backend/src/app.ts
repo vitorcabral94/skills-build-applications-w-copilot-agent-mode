@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express, { ErrorRequestHandler } from 'express';
 
-import { apiPort, getApiBaseUrl } from './config/apiUrl';
+import { apiPort, getApiBaseUrl } from './server';
 import activitiesRouter from './routes/activities';
 import leaderboardRouter from './routes/leaderboard';
 import teamsRouter from './routes/teams';
