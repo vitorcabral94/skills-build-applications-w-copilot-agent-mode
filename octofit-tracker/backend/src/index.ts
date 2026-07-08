@@ -4,7 +4,7 @@ import app from './app';
 import { apiPort, getApiBaseUrl } from './config/apiUrl';
 import './config/database';
 
-const port = Number(process.env.PORT ?? apiPort);
+const port = apiPort;
 
 app.listen(port, () => {
   console.log(`OctoFit Tracker backend listening on port ${port}`);
